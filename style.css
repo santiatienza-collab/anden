@@ -53,10 +53,6 @@ p { margin: 0 0 1em; }
 .mini { color: var(--g400); font-size: 13px; }
 .hero-img { position: relative; display: flex; justify-content: center; }
 .hero-img .phone { width: min(320px, 70vw); }
-.hero-badge { position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%); display: flex; align-items: center; gap: 8px; white-space: nowrap; font-size: 13px; font-weight: 700;
-  background: rgba(20,20,22,.94); border: 1.5px solid var(--neon); border-radius: 999px; padding: 7px 14px; box-shadow: 0 0 18px rgba(255,23,68,.55); }
-.hero-badge[hidden] { display: none; }
-.hero-badge i { width: 9px; height: 9px; border-radius: 50%; background: var(--neon); box-shadow: 0 0 8px 2px var(--neon); animation: pulse 1.3s ease-in-out infinite; }
 
 /* Marco de móvil */
 .phone { margin: 0; padding: 8px; border-radius: 34px; background: var(--g800); box-shadow: 0 24px 60px rgba(0,0,0,.55), 0 0 0 2px var(--g700); }
@@ -84,16 +80,6 @@ p { margin: 0 0 1em; }
 #accesibilidad .ticks li::before { background: var(--blue); box-shadow: 0 0 0 4px rgba(47,128,237,.22); }
 .t-info { color: var(--g400); } .t-warn { color: var(--amber); } .t-crit { color: var(--neon); text-shadow: 0 0 10px rgba(255,23,68,.6); }
 
-/* Contador */
-.counter { background: radial-gradient(800px 360px at 50% 0%, rgba(255,23,68,.14), transparent 70%), var(--g950); border-block: 1px solid var(--g800); padding: 72px 0; }
-.counter .sub { color: #d6d6dc; max-width: 60ch; margin-inline: auto; }
-.years { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; margin: 34px 0 22px; }
-.year { min-width: 170px; text-align: center; background: var(--g900); border: 1.5px solid rgba(255,23,68,.55); border-radius: 22px; padding: 22px 26px 18px; box-shadow: 0 0 26px rgba(255,23,68,.22), inset 0 0 22px rgba(255,23,68,.07); }
-.year .n { display: block; font-size: clamp(52px, 8vw, 78px); font-weight: 800; line-height: 1; letter-spacing: -.04em; color: var(--neon); font-variant-numeric: tabular-nums;
-  text-shadow: 0 0 10px rgba(255,23,68,.75), 0 0 28px rgba(255,23,68,.45); }
-.year .y { display: block; margin-top: 10px; font-size: 15px; font-weight: 700; color: #d6d6dc; letter-spacing: .04em; }
-.year.now { animation: glow 2.6s ease-in-out infinite; }
-
 /* Más funciones */
 .more { padding: 76px 0 30px; }
 .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 30px 0 44px; }
@@ -117,9 +103,7 @@ footer { background: var(--g950); border-top: 1px solid var(--g800); padding: 32
 .foot p { margin: 0; color: var(--g400); }
 .foot .brand { font-size: 20px; }
 
-@keyframes pulse { 0%,100% { opacity: .45; } 50% { opacity: 1; } }
-@keyframes glow { 0%,100% { box-shadow: 0 0 26px rgba(255,23,68,.22), inset 0 0 22px rgba(255,23,68,.07); } 50% { box-shadow: 0 0 40px rgba(255,23,68,.5), inset 0 0 26px rgba(255,23,68,.12); } }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .hero-badge i, .year.now { animation: none; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 @media (max-width: 880px) {
   .top nav { display: none; } .top .btn { margin-left: auto; }

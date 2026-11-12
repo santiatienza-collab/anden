@@ -9,7 +9,7 @@
   <meta property="og:title" content="Andén · Seguridad, retrasos y accesibilidad en la red ferroviaria">
   <meta property="og:description" content="Mapa en vivo de retrasos e incidencias, alertas de seguridad y accesibilidad de estaciones, con datos abiertos oficiales.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="img/web-escritorio.webp">
+  <meta property="og:image" content="img/mapa-espana.webp">
   <link rel="icon" href="icon.png">
   <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
@@ -22,7 +22,6 @@
     <a href="#seguridad">Seguridad</a>
     <a href="#retrasos">Retrasos</a>
     <a href="#accesibilidad">Accesibilidad</a>
-    <a href="#contador">Contador</a>
     <a href="#fuentes">Fuentes</a>
   </nav>
   <a class="btn small" href="https://santiatienza-collab.github.io/anden-datos/">Abrir la web</a>
@@ -43,8 +42,7 @@
       <p class="mini">Orientativo: no sustituye a la señalización ni a los avisos del operador.</p>
     </div>
     <div class="hero-img">
-      <figure class="phone"><img src="img/mapa-neon.webp" width="540" height="1129" alt="Mapa de la app Andén con un tramo de vía afectado por una alerta crítica iluminado en rojo neón"></figure>
-      <div class="hero-badge" id="live-badge" hidden><i></i><span id="live-badge-text"></span></div>
+      <figure class="phone"><img src="img/mapa-espana.webp" width="540" height="1129" alt="Mapa de España de la app Andén con los trenes en circulación, cada uno con el color de su retraso"></figure>
     </div>
   </section>
 
@@ -121,18 +119,6 @@
     </article>
   </section>
 
-  <!-- ───────── Contador ───────── -->
-  <section class="counter" id="contador" aria-labelledby="contador-t">
-    <div class="wrap">
-      <p class="eyebrow red center">Transparencia</p>
-      <h2 id="contador-t">Alertas críticas detectadas por Andén</h2>
-      <p class="center sub">Número de situaciones que Andén ha clasificado como <strong>críticas</strong> cada año.</p>
-      <div class="years" id="years" aria-live="polite"><p class="center note" id="years-msg">Cargando…</p></div>
-      <p class="center small" id="since"></p>
-      <p class="center small muted">Son <strong>detecciones automáticas</strong> a partir de datos abiertos: pueden incluir falsas alarmas o avisos de la propia operadora, y <strong>no son estadísticas oficiales de accidentes</strong>. Cada situación se cuenta una vez, mientras dure. Andén empezó a contar en la fecha indicada; no hay registro anterior.</p>
-    </div>
-  </section>
-
   <!-- ───────── Más funciones ───────── -->
   <section class="wrap more" aria-labelledby="mas-t">
     <h2 id="mas-t" class="center">Todo lo que hace Andén</h2>
@@ -181,6 +167,5 @@
   </div>
 </footer>
 
-<script src="app.js"></script>
 </body>
 </html>
