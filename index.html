@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Andén · Seguridad, retrasos y accesibilidad en la red ferroviaria española</title>
+  <meta name="description" content="Andén muestra en un mapa los retrasos, las incidencias, las alertas de seguridad y la accesibilidad de las estaciones de la red ferroviaria española, con datos abiertos oficiales. Web y app Android.">
+  <meta name="theme-color" content="#1c1c1f">
+  <meta property="og:title" content="Andén · Seguridad, retrasos y accesibilidad en la red ferroviaria">
+  <meta property="og:description" content="Mapa en vivo de retrasos e incidencias, alertas de seguridad y accesibilidad de estaciones, con datos abiertos oficiales.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="img/web-escritorio.webp">
+  <link rel="icon" href="icon.png">
+  <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="#inicio" aria-label="Andén, inicio"><img src="icon.png" alt="" width="40" height="40"><span>Andén</span></a>
+  <nav aria-label="Secciones de la página">
+    <a href="#seguridad">Seguridad</a>
+    <a href="#retrasos">Retrasos</a>
+    <a href="#accesibilidad">Accesibilidad</a>
+    <a href="#contador">Contador</a>
+    <a href="#fuentes">Fuentes</a>
+  </nav>
+  <a class="btn small" href="https://santiatienza-collab.github.io/anden-datos/">Abrir la web</a>
+</header>
+
+<main id="inicio">
+
+  <!-- ───────── Portada ───────── -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">Información ferroviaria · España</p>
+      <h1>Lo que pasa en la red ferroviaria, <em>ahora</em>.</h1>
+      <p class="lead">Andén reúne en un mapa los retrasos, las incidencias, las <strong>alertas de seguridad</strong> y la <strong>accesibilidad</strong> de las estaciones, a partir de datos abiertos oficiales. Gratis, sin registro y en castellano.</p>
+      <div class="cta">
+        <a class="btn" href="https://santiatienza-collab.github.io/anden-datos/">Abrir la web app</a>
+        <span class="btn ghost disabled" role="note" aria-label="La app para Android estará disponible próximamente en Google Play"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M3.6 2.3a1.4 1.4 0 0 0-.6 1.2v17a1.4 1.4 0 0 0 .6 1.2l9.6-9.7zm10.9 8.3 2.7-2.7L5.4 1.3a1.4 1.4 0 0 0-1 0zm0 .8-10.1 10.1a1.4 1.4 0 0 0 1 0l11.8-6.6zm5.4.6-2.6-1.5-2.9 2.9 2.9 2.9 2.6-1.5a1.4 1.4 0 0 0 0-2.8z"/></svg> App Android · próximamente en Google Play</span>
+      </div>
+      <p class="mini">Orientativo: no sustituye a la señalización ni a los avisos del operador.</p>
+    </div>
+    <div class="hero-img">
+      <figure class="phone"><img src="img/mapa-neon.webp" width="540" height="1129" alt="Mapa de la app Andén con un tramo de vía afectado por una alerta crítica iluminado en rojo neón"></figure>
+      <div class="hero-badge" id="live-badge" hidden><i></i><span id="live-badge-text"></span></div>
+    </div>
+  </section>
+
+  <!-- ───────── Homenaje ───────── -->
+  <section class="tribute" aria-labelledby="homenaje">
+    <div class="wrap narrow">
+      <p class="candle" aria-hidden="true">🕯️</p>
+      <h2 id="homenaje">En memoria de las víctimas de Adamuz y de Urda</h2>
+      <p>El <strong>18 de enero de 2026</strong>, en Adamuz (Córdoba), y el <strong>28 de octubre de 2026</strong>, en la línea de alta velocidad Madrid–Andalucía, entre Los Yébenes y Urda (Toledo), dos accidentes ferroviarios segaron la vida de decenas de personas e hirieron a muchas más.</p>
+      <p>Nuestro más profundo respeto y recuerdo para las víctimas, sus familias y sus amigos, y nuestro reconocimiento a los equipos de emergencia, sanitarios y ferroviarios que acudieron en su ayuda.</p>
+      <p>Andén se ha creado con una convicción: <strong>que se haga todo lo posible para que tragedias como estas no vuelvan a repetirse</strong>. Es una herramienta <strong>informativa</strong>: muestra, con datos públicos, situaciones que merecen atención. No es un sistema de seguridad ni sustituye a la señalización, a los operadores ni a las investigaciones oficiales, que son quienes determinan lo ocurrido.</p>
+    </div>
+  </section>
+
+  <!-- ───────── Tres pilares ───────── -->
+  <section class="wrap pillars" id="pilares" aria-labelledby="pilares-t">
+    <h2 id="pilares-t" class="sr-only">Lo esencial</h2>
+
+    <article class="pillar" id="seguridad">
+      <div class="pillar-text">
+        <p class="eyebrow red">Seguridad</p>
+        <h3>Alertas de seguridad</h3>
+        <p>Andén vigila, con datos abiertos, las situaciones que más importan y las clasifica en tres niveles: <b class="t-info">información</b>, <b class="t-warn">atención</b> y <b class="t-crit">crítico</b>.</p>
+        <ul class="ticks">
+          <li>Tren <strong>detenido en vía abierta</strong>, fuera de estación, durante varios minutos.</li>
+          <li>Tren que <strong>se acerca por detrás</strong> a otro detenido en el mismo corredor.</li>
+          <li><strong>Avisos oficiales</strong> de accidente, fallo de señalización, incidencia en la vía o falta de energía.</li>
+          <li><strong>Acumulación de trenes muy retrasados</strong> en una línea (posible bloqueo).</li>
+        </ul>
+        <p>Cuando hay una alerta crítica, <strong>el tramo afectado se ilumina en rojo neón en el mapa</strong> y, en la app, llega una <strong>notificación al móvil</strong> que te lleva directamente a ese punto. Para evitar falsas alarmas, el nivel crítico exige corroboración.</p>
+        <p class="note">Límites: las posiciones llegan con unos minutos de retraso y sin velocidad real. Iryo y Ouigo no publican datos abiertos, así que no se vigilan.</p>
+      </div>
+      <div class="pillar-img two">
+        <figure class="phone"><img loading="lazy" src="img/seguridad.webp" width="540" height="1129" alt="Pestaña Seguridad de la app con una alerta crítica por incidencia en la vía"></figure>
+        <figure class="phone off"><img loading="lazy" src="img/mapa-neon.webp" width="540" height="1129" alt="El mapa con los dos tramos afectados resaltados en rojo neón"></figure>
+      </div>
+    </article>
+
+    <article class="pillar flip" id="retrasos">
+      <div class="pillar-text">
+        <p class="eyebrow amber">Retrasos</p>
+        <h3>Retrasos de un vistazo</h3>
+        <p>Cada tren aparece en el mapa con el <strong>color de su retraso</strong>: puntual, retraso de 5 a 14 minutos, grave de 15 o más minutos o cancelado, y sin dato. Toca un tren para ver su última parada y su posición.</p>
+        <ul class="ticks">
+          <li>Contadores por gravedad y <strong>filtro por color</strong>.</li>
+          <li>Lista de retrasos con minutos, por <strong>compañía</strong> y por <strong>comunidad autónoma</strong>.</li>
+          <li>Avisos de obras, huelgas, autobuses sustitutorios e incidencias, con filtros por tipo.</li>
+          <li>Cercanías y larga distancia de Renfe, Euskotren, Metro Bilbao, FGC, Metro de Barcelona y Mallorca.</li>
+        </ul>
+        <p class="note">Los trenes de Mallorca no tienen tiempo real: su posición es una estimación según el horario y se muestran como un anillo blanco.</p>
+      </div>
+      <div class="pillar-img two">
+        <figure class="phone"><img loading="lazy" src="img/retrasos.webp" width="540" height="1129" alt="Pestaña Retrasos de la app: estadísticas por gravedad, compañía y comunidad"></figure>
+        <figure class="phone off"><img loading="lazy" src="img/avisos.webp" width="540" height="1129" alt="Pestaña Avisos de la app con filtros por tipo"></figure>
+      </div>
+    </article>
+
+    <article class="pillar" id="accesibilidad">
+      <div class="pillar-text">
+        <p class="eyebrow blue">Accesibilidad</p>
+        <h3>Accesibilidad en cada estación</h3>
+        <p>Antes de salir de casa, sabe si el <strong>ascensor</strong> o la <strong>escalera mecánica</strong> de tu estación funcionan. Andén detecta en los avisos oficiales los elementos fuera de servicio y los marca en la estación.</p>
+        <ul class="ticks">
+          <li>Aviso claro de <strong>ascensor fuera de servicio</strong> y de <strong>estación inaccesible</strong>.</li>
+          <li>Ficha de cada estación con las <strong>próximas salidas y llegadas</strong> y su retraso.</li>
+          <li>Más de <strong>1.900 estaciones</strong>, agrupadas por comunidad y provincia, con un buscador.</li>
+          <li>Icono de accesibilidad visible en el mapa y en el listado.</li>
+        </ul>
+      </div>
+      <div class="pillar-img two">
+        <figure class="phone"><img loading="lazy" src="img/accesibilidad.webp" width="540" height="1129" alt="Ficha de la estación Madrid-Atocha Cercanías con un ascensor fuera de servicio y próximas salidas"></figure>
+        <figure class="phone off"><img loading="lazy" src="img/oscuro.webp" width="540" height="1129" alt="El mapa de la app en modo oscuro"></figure>
+      </div>
+    </article>
+  </section>
+
+  <!-- ───────── Contador ───────── -->
+  <section class="counter" id="contador" aria-labelledby="contador-t">
+    <div class="wrap">
+      <p class="eyebrow red center">Transparencia</p>
+      <h2 id="contador-t">Alertas críticas detectadas por Andén</h2>
+      <p class="center sub">Número de situaciones que Andén ha clasificado como <strong>críticas</strong> cada año.</p>
+      <div class="years" id="years" aria-live="polite"><p class="center note" id="years-msg">Cargando…</p></div>
+      <p class="center small" id="since"></p>
+      <p class="center small muted">Son <strong>detecciones automáticas</strong> a partir de datos abiertos: pueden incluir falsas alarmas o avisos de la propia operadora, y <strong>no son estadísticas oficiales de accidentes</strong>. Cada situación se cuenta una vez, mientras dure. Andén empezó a contar en la fecha indicada; no hay registro anterior.</p>
+    </div>
+  </section>
+
+  <!-- ───────── Más funciones ───────── -->
+  <section class="wrap more" aria-labelledby="mas-t">
+    <h2 id="mas-t" class="center">Todo lo que hace Andén</h2>
+    <div class="cards">
+      <div class="card"><h3>🗺️ Mapa en castellano</h3><p>Todos los trenes en circulación, claro u oscuro, con la comunidad autónoma resaltada.</p></div>
+      <div class="card"><h3>🔔 Avisos al móvil</h3><p>Las alertas críticas llegan como notificación, también con la app cerrada, y abren el mapa en el lugar exacto.</p></div>
+      <div class="card"><h3>🚉 Estaciones</h3><p>Tablero de salidas y llegadas de cada estación, con la hora prevista y el retraso.</p></div>
+      <div class="card"><h3>🔍 Buscador</h3><p>Encuentra cualquier estación por su nombre y ábrela en el mapa.</p></div>
+      <div class="card"><h3>🛡️ Sin cuentas</h3><p>No hace falta registrarse ni compartir tu ubicación: Andén solo lee datos públicos.</p></div>
+      <div class="card"><h3>🌐 Web y Android</h3><p>La misma información en el navegador y en la app para Android. <a href="https://santiatienza-collab.github.io/anden-datos/">Abrir la web app</a>.</p></div>
+    </div>
+    <figure class="desktop"><img loading="lazy" src="img/web-escritorio.webp" width="1280" height="760" alt="La web de Andén en un ordenador, con el mapa y las alertas críticas iluminadas"><figcaption>La web app en el ordenador.</figcaption></figure>
+  </section>
+
+  <!-- ───────── Fuentes ───────── -->
+  <section class="sources" id="fuentes" aria-labelledby="fuentes-t">
+    <div class="wrap">
+      <h2 id="fuentes-t">Fuentes oficiales de los datos</h2>
+      <p class="sub">Andén no genera los datos: los toma de los portales de datos abiertos de los propios operadores y de organismos públicos.</p>
+      <ul class="src">
+        <li><b>Renfe</b> · Cercanías y larga distancia: horarios (GTFS), posiciones y retrasos en tiempo real (GTFS-RT) y avisos de servicio. Licencia CC BY 4.0. <a href="https://data.renfe.com">data.renfe.com</a></li>
+        <li><b>Euskotren</b> · horarios y tiempo real. <a href="https://opendata.euskadi.eus">Open Data Euskadi</a></li>
+        <li><b>Metro Bilbao</b> · horarios y tiempo real. <a href="https://www.metrobilbao.eus">metrobilbao.eus</a></li>
+        <li><b>Ferrocarrils de la Generalitat de Catalunya (FGC)</b> · horarios y tiempo real. <a href="https://www.fgc.cat">fgc.cat</a></li>
+        <li><b>Transports Metropolitans de Barcelona (TMB)</b> · próximos trenes del metro (iTransit). <a href="https://developer.tmb.cat">developer.tmb.cat</a></li>
+        <li><b>Consorci de Transports de Mallorca</b> · horarios del tren (SFM) y del metro de Palma. CC BY 4.0. <a href="https://www.tib.org">tib.org</a></li>
+        <li><b>Mapa:</b> © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, OpenMapTiles y <a href="https://openfreemap.org">OpenFreeMap</a>.</li>
+        <li><b>Límites de comunidades y provincias:</b> © EuroGeographics, <a href="https://ec.europa.eu/eurostat/web/gisco">Eurostat GISCO</a>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ───────── Aviso ───────── -->
+  <section class="wrap legal" aria-labelledby="aviso-t">
+    <h2 id="aviso-t">Aviso importante</h2>
+    <p>Andén es una herramienta <strong>informativa</strong>, independiente y sin ánimo de lucro, creada para ayudar a prevenir futuros accidentes y a hacer el sistema ferroviario más transparente. <strong>No es una aplicación oficial</strong> ni está vinculada a Renfe, Adif ni a ningún otro operador u organismo.</p>
+    <p>Los datos son orientativos, pueden tener minutos de retraso o contener errores. <strong>Andén no sustituye a la señalización, a los sistemas de protección de los trenes ni a las indicaciones del operador</strong>: ante cualquier duda de viaje o de seguridad, consulta los canales oficiales y sigue siempre las instrucciones del personal ferroviario y de los servicios de emergencia.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="brand"><img src="icon.png" alt="" width="32" height="32"><span>Andén</span></div>
+    <p>En memoria de las víctimas de Adamuz y de Urda.</p>
+    <p class="small"><a href="https://santiatienza-collab.github.io/anden-datos/">Web app</a> · <a href="https://github.com/santiatienza-collab/anden-datos">Código y datos en GitHub</a></p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
