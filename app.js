@@ -26,8 +26,10 @@ async function loadVictims() {
         el.innerHTML = '<span class="n" aria-label="' + known.total + ' fallecidos en ' + y + '">0</span><span class="y">' + y + '</span><span class="t">según Eurostat</span>';
         setTimeout(() => countUp(el.querySelector('.n'), known.total), 150);
       } else if (prov?.total != null || prov?.minimo != null) {
-        el.className = 'year prov';
-        el.innerHTML = '<span class="n">' + (prov.total != null ? prov.total : '+' + prov.minimo) + '</span><span class="y">' + y + '</span><span class="t">cifra provisional</span>';
+        const num = prov.total != null ? prov.total : prov.minimo;
+        el.className = 'year';
+        el.innerHTML = '<span class="n" aria-label="' + (prov.total == null ? 'al menos ' : '') + num + ' fallecidos en ' + y + '">0</span><span class="y">' + y + '</span><span class="t">' + esc(prov.etiqueta ?? 'otras fuentes') + '</span>';
+        setTimeout(() => { const n = el.querySelector('.n'); countUp(n, num); if (prov.total == null) setTimeout(() => (n.textContent = '+' + num), reduce ? 0 : 1000); }, 150);
       } else {
         el.className = 'year pending';
         el.innerHTML = '<span class="n">Sin datos</span><span class="y">' + y + '</span><span class="t">aún no publicados</span>';
