@@ -159,11 +159,15 @@
   },
   "provisional": {
     "2025": {
-      "texto": "Todavía no hay datos publicados de 2025: Eurostat y la AESF los publican con cerca de un año de retraso. Cuando salgan, aparecerán aquí automáticamente."
+      "total": 25,
+      "texto": "25 fallecidos (20 atropellos y 5 en pasos a nivel) en las 140 incidencias notificadas a la CIAF en la red ferroviaria de interés general (Adif), según su Memoria anual 2025 (julio de 2026). Cifra provisional: no incluye metros ni redes autonómicas y no es directamente comparable con la serie de Eurostat. Se sustituirá automáticamente cuando Eurostat publique 2025.",
+      "fuente": "CIAF, Memoria anual 2025",
+      "enlace": "https://www.transportes.gob.es/recursos_mfom/ciaf_memoriaanual-2025-v2_002.pdf"
     },
     "2026": {
-      "texto": "Solo los accidentes de Adamuz (18 de enero) y de Urda (28 de octubre) causaron más de 100 víctimas mortales según los balances publicados. Es una cifra provisional basada en los balances publicados por los medios; aún no hay datos consolidados de 2026.",
-      "minimo": 100
+      "minimo": 110,
+      "texto": "Solo los accidentes de Adamuz (18 de enero, 46 víctimas mortales según el último balance conocido) y de Urda (28 de octubre, 69 según el balance provisional de la CIAF) suman más de 110. Es una cifra provisional basada en los balances publicados; aún no hay datos consolidados de 2026 y no incluye otros accidentes del año.",
+      "fuente": "Balances publicados por los medios y la CIAF"
     }
   }
 }

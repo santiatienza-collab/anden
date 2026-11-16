@@ -44,9 +44,9 @@ async function loadVictims() {
       add(v.pasos_nivel, 'persona en pasos a nivel', 'personas en pasos a nivel'); add(v.no_autorizadas, 'persona no autorizada en la vía', 'personas no autorizadas en la vía'); add(v.otros, 'otra persona', 'otras personas');
       $('#years-detail').textContent = 'Último año con datos de Eurostat (' + ly + '): ' + v.total + ' fallecidos — ' + parts.join(', ') + '.';
     }
-    const provTexts = Object.entries(d.provisional ?? {}).filter(([y]) => !d.years?.[y] && Number(y) > last - 5).sort().map(([y, p]) => y + ': ' + p.texto);
+    const provTexts = Object.entries(d.provisional ?? {}).filter(([y]) => !d.years?.[y] && Number(y) > last - 5).sort().map(([y, p]) => esc(y + ': ' + p.texto) + (p.enlace ? ' <a href="' + esc(p.enlace) + '">' + esc(p.fuente ?? 'Fuente') + '</a>' : ''));
     $('#years-note').innerHTML = esc(d.definicion ?? '') + ' Datos de <a href="' + esc(d.enlace ?? '#') + '">' + esc(d.fuente ?? 'Eurostat') + '</a>; se publican con cerca de un año de retraso.' +
-      (provTexts.length ? '<br><br>' + provTexts.map(esc).join('<br>') : '');
+      (provTexts.length ? '<br><br>' + provTexts.join('<br><br>') : '');
   } catch (e) {
     $('#years-msg').textContent = 'Las cifras no están disponibles ahora mismo. Inténtalo de nuevo en unos minutos.';
   }
