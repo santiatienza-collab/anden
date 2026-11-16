@@ -1,0 +1,169 @@
+{
+  "fuente": "Eurostat, tran_sf_railvi (datos de la Agencia Ferroviaria de la UE, ERA)",
+  "enlace": "https://ec.europa.eu/eurostat/databrowser/view/tran_sf_railvi/default/table",
+  "definicion": "Personas fallecidas en el acto o en los 30 días siguientes a un accidente ferroviario, excluidos los suicidios.",
+  "actualizado_eurostat": "2026-01-13T11:00:00+0100",
+  "years": {
+    "2006": {
+      "total": 56,
+      "viajeros": 9,
+      "personal": 3,
+      "pasos_nivel": 14,
+      "no_autorizadas": 30,
+      "otros": 0
+    },
+    "2007": {
+      "total": 65,
+      "viajeros": 13,
+      "personal": 0,
+      "pasos_nivel": 19,
+      "no_autorizadas": 33,
+      "otros": 0
+    },
+    "2008": {
+      "total": 46,
+      "viajeros": 5,
+      "personal": 1,
+      "pasos_nivel": 15,
+      "no_autorizadas": 23,
+      "otros": 2
+    },
+    "2009": {
+      "total": 31,
+      "viajeros": 2,
+      "personal": 0,
+      "pasos_nivel": 16,
+      "no_autorizadas": 13,
+      "otros": 0
+    },
+    "2010": {
+      "total": 37,
+      "viajeros": 15,
+      "personal": 3,
+      "pasos_nivel": 9,
+      "no_autorizadas": 10,
+      "otros": 0
+    },
+    "2011": {
+      "total": 25,
+      "viajeros": 2,
+      "personal": 0,
+      "pasos_nivel": 8,
+      "no_autorizadas": 15,
+      "otros": 0
+    },
+    "2012": {
+      "total": 27,
+      "viajeros": 4,
+      "personal": 0,
+      "pasos_nivel": 5,
+      "no_autorizadas": 16,
+      "otros": 2
+    },
+    "2013": {
+      "total": 105,
+      "viajeros": 79,
+      "personal": 2,
+      "pasos_nivel": 7,
+      "no_autorizadas": 17,
+      "otros": 0
+    },
+    "2014": {
+      "total": 25,
+      "viajeros": 3,
+      "personal": 1,
+      "pasos_nivel": 8,
+      "no_autorizadas": 13,
+      "otros": 0
+    },
+    "2015": {
+      "total": 20,
+      "viajeros": 0,
+      "personal": 1,
+      "pasos_nivel": 6,
+      "no_autorizadas": 12,
+      "otros": 1
+    },
+    "2016": {
+      "total": 28,
+      "viajeros": 3,
+      "personal": 2,
+      "pasos_nivel": 8,
+      "no_autorizadas": 13,
+      "otros": 2
+    },
+    "2017": {
+      "total": 29,
+      "viajeros": 1,
+      "personal": 1,
+      "pasos_nivel": 14,
+      "no_autorizadas": 10,
+      "otros": 3
+    },
+    "2018": {
+      "total": 16,
+      "viajeros": 1,
+      "personal": 0,
+      "pasos_nivel": 7,
+      "no_autorizadas": 7,
+      "otros": 1
+    },
+    "2019": {
+      "total": 22,
+      "viajeros": 0,
+      "personal": 1,
+      "pasos_nivel": 1,
+      "no_autorizadas": 16,
+      "otros": 4
+    },
+    "2020": {
+      "total": 13,
+      "viajeros": 0,
+      "personal": 1,
+      "pasos_nivel": 3,
+      "no_autorizadas": 5,
+      "otros": 4
+    },
+    "2021": {
+      "total": 15,
+      "viajeros": 1,
+      "personal": 0,
+      "pasos_nivel": 4,
+      "no_autorizadas": 10,
+      "otros": 0
+    },
+    "2022": {
+      "total": 21,
+      "viajeros": 0,
+      "personal": 0,
+      "pasos_nivel": 7,
+      "no_autorizadas": 12,
+      "otros": 2
+    },
+    "2023": {
+      "total": 22,
+      "viajeros": 0,
+      "personal": 0,
+      "pasos_nivel": 8,
+      "no_autorizadas": 14,
+      "otros": 0
+    },
+    "2024": {
+      "total": 18,
+      "viajeros": 1,
+      "personal": 0,
+      "pasos_nivel": 8,
+      "no_autorizadas": 8,
+      "otros": 1
+    }
+  },
+  "provisional": {
+    "2025": {
+      "texto": "Eurostat y la AESF aún no han publicado el dato oficial de 2025."
+    },
+    "2026": {
+      "texto": "Solo los accidentes de Adamuz (18 de enero) y de Urda (28 de octubre) causaron más de 100 víctimas mortales según los balances publicados. Es una cifra provisional y no oficial: el dato oficial de 2026 todavía no existe.",
+      "minimo": 100
+    }
+  }
+}

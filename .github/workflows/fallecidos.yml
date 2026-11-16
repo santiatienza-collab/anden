@@ -1,0 +1,33 @@
+name: Actualizar cifras de fallecidos
+
+# Dos veces al mes consulta Eurostat y, si hay datos nuevos (p. ej. cuando publica el año anterior), actualiza data/fallecidos.json.
+on:
+  schedule:
+    - cron: '17 6 1,15 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Consultar Eurostat
+        run: node tools/update-fallecidos.mjs
+      - name: Guardar si ha cambiado
+        run: |
+          if [ -n "$(git status --porcelain data/fallecidos.json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/fallecidos.json
+            git commit -m "Actualizar cifras de fallecidos (Eurostat)"
+            git push
+          else
+            echo "Sin cambios."
+          fi

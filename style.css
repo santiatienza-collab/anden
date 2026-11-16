@@ -113,3 +113,16 @@ footer { background: var(--g950); border-top: 1px solid var(--g800); padding: 32
   .pillar.flip .pillar-text { order: 0; }
   .cards, .src { grid-template-columns: 1fr; }
 }
+
+/* Víctimas por año */
+.victims { background: radial-gradient(800px 360px at 50% 0%, rgba(255,23,68,.13), transparent 70%), var(--g950); border-block: 1px solid var(--g800); padding: 72px 0; }
+.victims .sub { color: #d6d6dc; max-width: 62ch; margin-inline: auto; }
+.years { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin: 34px 0 20px; }
+.year { width: 188px; text-align: center; background: var(--g900); border: 1.5px solid rgba(255,23,68,.5); border-radius: 22px; padding: 22px 16px 16px; box-shadow: 0 0 24px rgba(255,23,68,.2), inset 0 0 22px rgba(255,23,68,.06); }
+.year .n { display: block; font-size: clamp(48px, 8vw, 70px); font-weight: 800; line-height: 1; letter-spacing: -.04em; color: var(--neon); font-variant-numeric: tabular-nums; text-shadow: 0 0 10px rgba(255,23,68,.7), 0 0 28px rgba(255,23,68,.4); }
+.year .y { display: block; margin-top: 10px; font-size: 15px; font-weight: 700; color: #d6d6dc; letter-spacing: .04em; }
+.year .t { display: block; margin-top: 8px; font-size: 12px; line-height: 1.4; color: var(--g400); }
+.year.pending { border-style: dashed; border-color: var(--g600); box-shadow: none; }
+.year.pending .n { font-size: 26px; line-height: 1.25; color: var(--g400); text-shadow: none; padding: 14px 0 12px; letter-spacing: -.01em; }
+.year.prov { border-color: rgba(255,214,10,.55); box-shadow: 0 0 18px rgba(255,214,10,.12); }
+.year.prov .n { font-size: 34px; line-height: 1.15; color: var(--yellow); text-shadow: 0 0 10px rgba(255,214,10,.4); padding: 8px 0 4px; letter-spacing: -.02em; }

@@ -22,6 +22,7 @@
     <a href="#seguridad">Seguridad</a>
     <a href="#retrasos">Retrasos</a>
     <a href="#accesibilidad">Accesibilidad</a>
+    <a href="#victimas">Víctimas</a>
     <a href="#fuentes">Fuentes</a>
   </nav>
   <a class="btn small" href="https://santiatienza-collab.github.io/anden-datos/">Abrir la web</a>
@@ -119,6 +120,18 @@
     </article>
   </section>
 
+  <!-- ───────── Víctimas por año ───────── -->
+  <section class="victims" id="victimas" aria-labelledby="victimas-t">
+    <div class="wrap">
+      <p class="eyebrow red center">Por qué importa</p>
+      <h2 id="victimas-t" class="center">Víctimas mortales en accidentes ferroviarios en España</h2>
+      <p class="center sub">Personas fallecidas cada año en los últimos cinco años. Las cifras oficiales se actualizan automáticamente.</p>
+      <div class="years" id="years" aria-live="polite"><p class="center note" id="years-msg">Cargando…</p></div>
+      <p class="center small" id="years-detail"></p>
+      <p class="center small muted" id="years-note"></p>
+    </div>
+  </section>
+
   <!-- ───────── Más funciones ───────── -->
   <section class="wrap more" aria-labelledby="mas-t">
     <h2 id="mas-t" class="center">Todo lo que hace Andén</h2>
@@ -145,6 +158,7 @@
         <li><b>Ferrocarrils de la Generalitat de Catalunya (FGC)</b> · horarios y tiempo real. <a href="https://www.fgc.cat">fgc.cat</a></li>
         <li><b>Transports Metropolitans de Barcelona (TMB)</b> · próximos trenes del metro (iTransit). <a href="https://developer.tmb.cat">developer.tmb.cat</a></li>
         <li><b>Consorci de Transports de Mallorca</b> · horarios del tren (SFM) y del metro de Palma. CC BY 4.0. <a href="https://www.tib.org">tib.org</a></li>
+        <li><b>Víctimas mortales por año:</b> Eurostat (tran_sf_railvi), a partir de los datos de la Agencia Ferroviaria de la Unión Europea (ERA); en España, la Agencia Estatal de Seguridad Ferroviaria (AESF) y la CIAF. <a href="https://ec.europa.eu/eurostat/databrowser/view/tran_sf_railvi/default/table">Eurostat</a> · <a href="https://www.seguridadferroviaria.es">AESF</a></li>
         <li><b>Mapa:</b> © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, OpenMapTiles y <a href="https://openfreemap.org">OpenFreeMap</a>.</li>
         <li><b>Límites de comunidades y provincias:</b> © EuroGeographics, <a href="https://ec.europa.eu/eurostat/web/gisco">Eurostat GISCO</a>.</li>
       </ul>
@@ -166,6 +180,8 @@
     <p class="small"><a href="https://santiatienza-collab.github.io/anden-datos/">Web app</a> · <a href="https://github.com/santiatienza-collab/anden-datos">Código y datos en GitHub</a></p>
   </div>
 </footer>
+
+<script src="app.js"></script>
 
 </body>
 </html>
