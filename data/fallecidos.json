@@ -159,10 +159,10 @@
   },
   "provisional": {
     "2025": {
-      "texto": "Eurostat y la AESF aún no han publicado el dato oficial de 2025."
+      "texto": "Todavía no hay datos publicados de 2025: Eurostat y la AESF los publican con cerca de un año de retraso. Cuando salgan, aparecerán aquí automáticamente."
     },
     "2026": {
-      "texto": "Solo los accidentes de Adamuz (18 de enero) y de Urda (28 de octubre) causaron más de 100 víctimas mortales según los balances publicados. Es una cifra provisional y no oficial: el dato oficial de 2026 todavía no existe.",
+      "texto": "Solo los accidentes de Adamuz (18 de enero) y de Urda (28 de octubre) causaron más de 100 víctimas mortales según los balances publicados. Es una cifra provisional basada en los balances publicados por los medios; aún no hay datos consolidados de 2026.",
       "minimo": 100
     }
   }

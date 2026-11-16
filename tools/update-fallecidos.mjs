@@ -2,7 +2,7 @@
 // (dataset tran_sf_railvi, a partir de los datos de la Agencia Ferroviaria de la UE, ERA). "Fallecido" = persona muerta en el
 // acto o en los 30 días siguientes a un accidente; NO incluye suicidios. Se ejecuta a mano o desde el flujo mensual.
 //
-// Se conserva el campo "provisional" (notas escritas a mano para años aún sin dato oficial) y se retira solo cuando ya hay dato oficial.
+// Se conserva el campo "provisional" (notas escritas a mano para años aún sin datos; admite "total" o "minimo") y se retira solo cuando Eurostat ya publica ese año.
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 
 const API = 'https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tran_sf_railvi?format=JSON&lang=EN&geo=ES&unit=NR';
