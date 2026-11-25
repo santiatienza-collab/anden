@@ -129,7 +129,7 @@ footer { background: var(--g950); border-top: 1px solid var(--g800); padding: 32
 
 /* Voz para personas invidentes */
 .voice { background: radial-gradient(900px 420px at 15% 0%, rgba(47,128,237,.16), transparent 70%), var(--g950); border-block: 1px solid var(--g800); padding: 76px 0; }
-.voice-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 48px; align-items: start; }
+.voice-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: start; }
 .voice .lead { font-size: clamp(17px, 2vw, 20px); color: #d6d6dc; max-width: 58ch; }
 .vcards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 26px 0 8px; }
 .vcard { background: var(--g800); border: 1.5px solid rgba(47,128,237,.5); border-radius: 18px; padding: 20px; box-shadow: 0 0 22px rgba(47,128,237,.14); }
@@ -139,6 +139,7 @@ footer { background: var(--g950); border-top: 1px solid var(--g800); padding: 32
 .voice .ticks li::before { background: var(--blue); box-shadow: 0 0 0 4px rgba(47,128,237,.22); }
 .steps { padding-left: 22px; margin: 0 0 1.2em; } .steps li { margin-bottom: 8px; padding-left: 4px; }
 .voice .note { font-size: 13.5px; }
-.voice-img { position: sticky; top: 90px; display: flex; justify-content: center; }
-.voice-img .phone { width: min(300px, 70vw); }
+.voice-img { position: sticky; top: 90px; display: flex; justify-content: center; gap: 16px; }
+.voice-img .phone { width: min(230px, 42vw); }
+.voice-img .phone.off { margin-top: 44px; }
 @media (max-width: 880px) { .voice-grid { grid-template-columns: 1fr; } .vcards { grid-template-columns: 1fr; } .voice-img { position: static; order: -1; } }
