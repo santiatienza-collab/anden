@@ -158,3 +158,11 @@ footer { background: var(--g950); border-top: 1px solid var(--g800); padding: 32
 .install .card { background: var(--g900); }
 @media (max-width: 880px) { .install-grid { grid-template-columns: 1fr; } }
 .install + .sources { margin-top: 0; }
+
+.dl-title { margin: 34px 0 14px; font-size: 22px; }
+.downloads { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-bottom: 18px; }
+.dl { display: flex; align-items: center; gap: 14px; background: var(--yellow); color: var(--g950); text-decoration: none; border-radius: 16px; padding: 12px 22px; font-weight: 800; font-size: 17px; line-height: 1.2; min-width: 250px; }
+.dl small { display: block; font-size: 11.5px; font-weight: 600; opacity: .75; }
+.dl-ic { font-size: 24px; width: 30px; text-align: center; }
+a.dl:hover { background: #fff; color: var(--g950); }
+.dl.disabled { background: var(--g900); color: var(--g400); border: 1px solid var(--g600); cursor: default; }
