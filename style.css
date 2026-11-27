@@ -166,3 +166,7 @@ footer { background: var(--g950); border-top: 1px solid var(--g800); padding: 32
 .dl-ic { font-size: 24px; width: 30px; text-align: center; }
 a.dl:hover { background: #fff; color: var(--g950); }
 .dl.disabled { background: var(--g900); color: var(--g400); border: 1px solid var(--g600); cursor: default; }
+
+.iphone-block { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: center; margin: 40px 0 10px; background: var(--g900); border-radius: 22px; padding: 28px; }
+.iphone-block h3 { font-size: 22px; letter-spacing: -.01em; }
+@media (max-width: 880px) { .iphone-block { grid-template-columns: 1fr; padding: 20px; } }
